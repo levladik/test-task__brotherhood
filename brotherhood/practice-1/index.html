@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@800&family=PT+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="normalize.css" />
+    <title>Modal window</title>
+  </head>
+  <body>
+    <button class="open-modal__btn">Стать партнёром проекта</button>
+
+    <!-- Modal Window -->
+    <div id="modal" class="modal">
+      <div class="modal__container">
+        <h2 class="modal__title">Стать партнёром проекта</h2>
+        <!-- Form -->
+        <form class="form" action="/practice-1/index.html" method="POST">
+          <div class="flex-container">
+            <div class="input-container">
+              <!-- Form Elements -->
+              <div class="form-element">
+                <label for="name"><span>✱</span>Название организации</label>
+                <input
+                  class="form-element__required-input"
+                  id="name"
+                  type="text"
+                  name="name"
+                  required
+                />
+              </div>
+
+              <div class="form-element">
+                <label for="phone"><span>✱</span>Телефон</label>
+                <input
+                  class="form-element__required-input"
+                  id="phone"
+                  type="tel"
+                  name="phone"
+                  pattern="^(?:\+|\d)[\d\- ]+$"
+                  required
+                />
+              </div>
+
+              <div class="form-element">
+                <label for="email"><span>✱</span>E-mail</label>
+                <input
+                  class="form-element__required-input"
+                  id="email"
+                  type="email"
+                  name="email"
+                  pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+                  required
+                />
+              </div>
+            </div>
+            <!-- Logo Upload -->
+            <div class="form-element form-logo">
+              <label for="logo"> <span>✱</span>Логотип (jpeg, png) </label>
+              <div class="form-logo__delete-image-btn">
+                <img
+                  class="form-logo__delete-image-ico"
+                  src="../src/icons/close-ico.png"
+                  alt="delete-logo-image"
+                />
+              </div>
+              <div class="upload-preview"></div>
+              <img
+                class="form-logo__upload-preview-ico"
+                src="../src/icons/upload-ico.png"
+                alt="upload file"
+              />
+              <p>
+                выберите<br />
+                файл
+              </p>
+              <input
+                class="form-element__required-input"
+                id="logo"
+                type="file"
+                name="logo"
+                accept="image/jpeg, image/png"
+                required
+              />
+            </div>
+          </div>
+          <!-- Activity Selector -->
+          <div 
+			 class="form-element">
+            <label for="activity"><span>✱</span>Направление</label>
+            <select
+              class="activity_selected"
+              id="activity"
+              name="activity"
+              required
+            >
+              <option class="activity_default" value=""></option>
+              <option value="ecology">Экология</option>
+              <option value="it">IT</option>
+              <option value="education">Образование</option>
+              <option value="finance">Финансы</option>
+              <option value="own-variant">Свой вариант</option>
+            </select>
+            <input
+              class="form-element__required-input activity_own"
+              type="text"
+              name="own-variant"
+              id="activity-own"
+            />
+          </div>
+          <!-- Not Required Inputs -->
+          <div class="form-element">
+            <input
+              class="form-element__not-required-input"
+              id="website"
+              type="text"
+              name="website"
+              placeholder="Cайт"
+            />
+            <img
+              class="form-element__link-ico"
+              src="../src/icons/website-ico.png"
+              alt="website-link"
+            />
+          </div>
+
+          <div class="form-element">
+            <input
+              class="form-element__not-required-input"
+              id="vk"
+              type="text"
+              name="vk"
+              placeholder="ВК"
+            />
+            <img
+              class="form-element__link-ico"
+              src="../src/icons/vk-ico.png"
+              alt="vk-link"
+            />
+          </div>
+
+          <div class="form-element">
+            <input
+              class="form-element__not-required-input"
+              id="ok"
+              type="text"
+              name="ok"
+              placeholder="Одноклассники"
+            />
+            <img
+              class="form-element__link-ico"
+              src="../src/icons/ok-ico.png"
+              alt="ok-link"
+            />
+          </div>
+
+          <div class="form-element">
+            <input
+              class="form-element__not-required-input"
+              id="facebook"
+              type="text"
+              name="facebook"
+              placeholder="Facebook"
+            />
+            <img
+              class="form-element__link-ico"
+              src="../src/icons/facebook-ico.png"
+              alt="facebook-link"
+            />
+          </div>
+
+          <div class="form-element">
+            <input
+              class="form-element__not-required-input"
+              id="instagram"
+              type="text"
+              name="instagram"
+              placeholder="Instagram"
+            />
+            <img
+              class="form-element__link-ico"
+              src="../src/icons/instagram-ico.png"
+              alt="instagram-link"
+            />
+          </div>
+
+          <div class="form-element">
+            <input
+              class="form-element__not-required-input"
+              id="youtube"
+              type="text"
+              name="youtube"
+              placeholder="YouTube"
+            />
+            <img
+              class="form-element__link-ico"
+              src="../src/icons/youtube-ico.png"
+              alt="youtube-link"
+            />
+          </div>
+
+          <div class="form-element">
+            <label for="activity">Руководитель</label>
+            <input
+              class="form-element__director"
+              id="website"
+              type="text"
+              name="website"
+            />
+          </div>
+          <!-- Submit Button -->
+          <button class="form__submit-btn" type="submit">
+            Стать партнёром проекта
+          </button>
+
+          <button class="form__cancel-btn" type="button">Отменить</button>
+        </form>
+      </div>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>

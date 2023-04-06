@@ -1,0 +1,290 @@
+html {
+	font-size: 10px;
+}
+
+body {
+	padding: 200px 0;
+}
+
+.open-modal__btn {
+	display: block;
+	margin: 0 auto;
+	padding: 15px;
+	border-radius: 4px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	font-size: 1.6rem;
+	color: #FFFFFF;	
+	background-color: #E5266E;
+	text-align: center;	
+}
+
+.modal {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 100px 100px;
+	background-color: #616161;
+	display: none;
+}
+.modal__container {
+	max-width: 754px;
+	margin: 0 auto;
+	padding: 50px 100px;
+	border-radius: 12px;
+	background-color: #FFFFFF;
+}
+h2 {
+	margin-bottom: 32px;
+	font-family: "Montserat", sans-serif;
+	font-weight: 800;
+	font-size: 2.8rem;
+	color: #0C1014;
+}
+
+/* Form Elements */
+.flex-container {
+	display: flex;
+	justify-content: space-between;
+}
+.input-container {
+	width: 100%;
+	margin-right: 25px;
+}
+.form-element {
+	position: relative;
+	margin-bottom: 32px;
+	width: auto;
+}
+.form-element label {
+	position: absolute;
+	top: 8px;
+	left: 14px;
+	font-family: "PT Sans";
+	font-weight: 400;
+	font-size: 1.2rem;
+	color: #6A6E72;
+	pointer-events: none;
+}
+.form-element input {
+	border: 1px solid #D6DADE;
+	border-radius: 4px;
+	width: 100%;
+	min-width: 265px;
+	font-family: "PT Sans";
+	font-weight: 400;
+	font-size: 1.6rem;
+	line-height: 1.5;
+}
+.form-element__required-input {
+	padding: 20px 10px 10px 16px;
+}
+.form-element__not-required-input {
+	padding: 15px;
+}
+.form-element label span,
+.form-logo label span {
+	color: #D90000;
+}
+.activity_selected {
+	background-image: url('../src/icons/arro-ico.png');
+	background-repeat: no-repeat;
+	background-position: bottom 20px right 13px;
+}
+select {
+	width: 100%;
+	padding: 20px 10px 14px 10px;	
+	border: 1px solid #D6DADE;
+	border-radius: 4px;
+	font-family: 'PT Sans';
+	font-weight: 400;
+	font-size: 1.6rem;
+	appearance: none;
+}
+.activity_default {
+	display: none;
+}
+.activity_own {
+	display: none;
+}
+.form-element__link-ico {
+	position: absolute;
+	right: 13px;
+	top: 35%;
+}
+.form-element__director {
+	padding: 20px 10px 10px 16px;
+	margin-bottom: 16px;
+}
+
+/* Logo */
+.form-logo {
+	position: relative;
+	margin-top: 34px;
+	margin-bottom: 32px;
+	width: 165px;
+	height: 165px;
+	border: 1px solid #D6DADE;
+	border-radius: 50%;
+}
+.upload-preview {
+	position: absolute;	
+	background-size: cover;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background-color: #6A6E72;
+}
+.form-logo label {
+	position: absolute;
+	top: -32px;
+	left: 20px;
+	font-family: "PT Sans";
+	font-weight: 700;
+	font-size: 1.4rem;
+	color: #6A6E72;
+}
+.form-logo__upload-preview-ico {
+	position: absolute;
+	top: 55px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	max-height: 100%;
+	max-width: 100%;
+}
+.form-logo p {
+	position: absolute;
+	top: 102px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-family: "PT Sans";
+	font-weight: 400;
+	font-size: 1.8rem;
+	line-height: 1.6;
+	text-decoration: underline;
+	text-align: center;
+	color: #FFFFFF;
+}
+.form-logo input {
+	width: 165px;
+	height: 165px;
+	border-radius: 50%;
+	opacity: 0;
+	cursor: pointer;
+}
+
+/* Delete Image Button */
+.form-logo__delete-image-btn {
+	position: absolute;
+	left: 78%;
+	top: 10%;
+	z-index: 9;
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: .3s;
+}
+.form-logo__delete-image-btn:hover {
+	transform: scale(1.2);
+}
+
+/* Submit */
+.form__submit-btn {
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 15px;
+	padding: 15px;
+	width: 100%;
+	border-radius: 4px;
+	text-align: center;	
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	font-size: 1.6rem;
+	color: #FFFFFF;
+	background-color: #E5266E;
+	transition: .3s;
+}
+.form__submit-btn:hover {
+	background-color: #b41d57;
+}
+.form__cancel-btn {
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 5px;
+	font-family: 'PT Sans';
+	font-weight: 400;
+	font-size: 1.6rem;
+	background-color: #FFFFFF;
+	color: #0848C0;
+	transition: .3s;
+}
+.form__cancel-btn:hover {
+	text-decoration: underline;
+}
+
+
+@media (max-width: 872px) {
+	.modal__container {
+		text-align: center;
+	}
+	.flex-container {
+		display: block;
+	}
+	.form-logo {
+		margin: 32px auto;
+	}
+	.form-logo__delete-image-btn span {
+		left: 25%;
+	}
+	.input-container {
+		padding-bottom: 1px;
+	}
+}
+
+@media (max-width: 820px) {
+	html {
+		font-size: 9px;
+	}
+	.modal {
+		padding: 25px;
+	}
+}
+
+@media (max-width: 680px) {
+	html {
+		font-size: 8px;
+	}
+	.modal__container {
+		padding: 25px;
+	}
+	.form-element input,
+	.activity_selected {
+		min-width: 200px;
+	}
+}
+
+@media (max-width: 340px) {
+	h2 {
+		font-size: 1.8rem;
+		margin-bottom: 10px;
+	}
+	.modal {
+		padding: 10px;
+	}
+	.form-element {
+		margin: 10px auto;
+	}
+	.form-logo {
+		margin-top: 30px;
+	}
+}
+
+@media (max-width: 290px) {
+	.modal__container {
+		padding: 15px 8px;
+	}
+}
