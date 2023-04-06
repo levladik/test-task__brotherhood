@@ -15,6 +15,7 @@ i++ перезаписывает i, инициализированную на п
 
 Второй вариант исправить код - использовать замыкание:
 
+```javascript
 const wrapperFunc = (j) => {
   setTimeout(function () {
     console.log(arr[j] > 13 ? `Good: ${arr[j]}` : `Bad: ${arr[j]}`);
@@ -24,7 +25,7 @@ const wrapperFunc = (j) => {
 for (var i = 0; i < arr.length; i++) {
   wrapperFunc(i);  
 };
-
+```
 Цикл for 4 раза вызывает функцию wrapperFunc, внутрь которой каждый раз передает разные значения i, 
 потому что wrapperFunc замыкается на конкретном значении i на каждой итерации.
 
