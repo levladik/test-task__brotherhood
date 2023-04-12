@@ -2,6 +2,7 @@ const tableBody = document.querySelector('.table-body');
 const userCardTemplate = document.querySelector('.data-user-table');
 const userCardContainer = document.querySelector('.data-user-cards-container');
 const searchInput = document.querySelector('.data-search');
+let value;
 
 let users = [];
 
@@ -52,7 +53,7 @@ fetch('https://jsonplaceholder.typicode.com/posts')
 				return { userId: user.userId, id: user.id, title: user.title, body: user.body, element: card };
 			})
 		}
-
+		
 		renderRows();
 		//Listening Click on Column Titles
 		const userIdHeader = document.querySelector('.user-id-header');
@@ -67,7 +68,7 @@ fetch('https://jsonplaceholder.typicode.com/posts')
 
 		//Sorting
 		const sortByUserId = () => {
-			data.sort((a, b) => {
+			let sortusers = data.sort((a, b) => {
 				if (isSortingByUserIdAscend) {
 					return a.userId - b.userId;
 				} else {
@@ -89,6 +90,7 @@ fetch('https://jsonplaceholder.typicode.com/posts')
 			})
 			isSortingByIdAscend = !isSortingByIdAscend;
 			renderRows();
+			search();
 		}
 
 		const sortByTitle = () => {
