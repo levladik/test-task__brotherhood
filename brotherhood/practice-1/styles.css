@@ -81,7 +81,7 @@ h2 {
 	padding: 20px 10px 10px 16px;
 }
 .form-element__not-required-input {
-	padding: 15px;
+	padding: 15px 40px 15px 15px;
 }
 .form-element label span,
 .form-logo label span {
