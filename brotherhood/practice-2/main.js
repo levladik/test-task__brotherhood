@@ -5,9 +5,8 @@ const searchInput = document.querySelector('.data-search');
 
 let users = [];
 
-searchInput.addEventListener('input', event => {
-	const value = event.target.value.toLowerCase();
-	if (value.length >= 3) {
+const search = () => {
+		if (value.length >= 3) {
 		users.forEach(user => {
 			const isVisible =
 				user.id.toString().toLowerCase().includes(value) ||
@@ -22,6 +21,11 @@ searchInput.addEventListener('input', event => {
 			user.element.classList.remove('hide');
 		})
 	}
+}
+	
+searchInput.addEventListener('input', event => {
+	value = event.target.value.toLowerCase();
+	search();
 })
 
 fetch('https://jsonplaceholder.typicode.com/posts')
@@ -72,6 +76,7 @@ fetch('https://jsonplaceholder.typicode.com/posts')
 			});
 			isSortingByUserIdAscend = !isSortingByUserIdAscend;
 			renderRows();
+			search();
 		}
 
 		const sortById = () => {
@@ -97,6 +102,7 @@ fetch('https://jsonplaceholder.typicode.com/posts')
 			})
 			isSortingByTitleAscend = !isSortingByTitleAscend;
 			renderRows();
+			search();
 		}
 
 		const sortByMessage = () => {
@@ -109,6 +115,7 @@ fetch('https://jsonplaceholder.typicode.com/posts')
 			})
 			isSortingByMessageAscend = !isSortingByMessageAscend;
 			renderRows();
+			search();
 		}
 
 		userIdHeader.addEventListener('click', sortByUserId);
